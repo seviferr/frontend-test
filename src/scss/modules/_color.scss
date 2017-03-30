@@ -1,0 +1,67 @@
+.orange{
+    color:$main-orange!important;
+
+    kbd{
+        background-color: $main-orange;
+        color:white;
+    }
+}
+
+.light-orange{
+     color:$light-orange;
+
+    kbd{
+        background-color: $light-orange;
+        color:white;
+    }
+
+}
+
+
+.light-grey{
+    color:$gray-light;
+
+     kbd{
+        background-color: $gray-light;
+        color:white;
+    }
+}
+
+
+.grey{
+    color:$gray;
+
+     kbd{
+        background-color: $gray;
+        color:white;
+    }
+}
+
+
+
+.green{
+     color:$brand-primary!important;
+
+     kbd{
+        background-color: $brand-primary;
+        color:white;
+    }
+}
+
+.light-green{
+    color:$light-green!important;
+
+     kbd{
+        background-color: $light-green;
+        color:white;
+    }
+}
+
+.brown{
+    color:$brown;
+
+     kbd{
+        background-color: $brown;
+        color:white;
+    }
+}
