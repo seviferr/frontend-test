@@ -1,10 +1,5 @@
-.nav {
-  ul {
-    list-style: none;
-    li {
-      a {
+body > aside{
+	background-color: $gray-lil-darker;
+	height: calc(100vh - #{$navbar-height});
 
-      }
-    }
-  }
 }
