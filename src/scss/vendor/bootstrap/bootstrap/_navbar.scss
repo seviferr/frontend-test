@@ -192,7 +192,7 @@
 
 .navbar-toggle {
   position: relative;
-  float: right;
+  float: left;
   margin-right: $navbar-padding-horizontal;
   padding: 9px 10px;
   @include navbar-vertical-align(34px);
@@ -213,12 +213,13 @@
     width: 22px;
     height: 2px;
     border-radius: 1px;
+        background: white;
   }
   .icon-bar + .icon-bar {
     margin-top: 4px;
   }
 
-  @media (min-width: $grid-float-breakpoint) {
+  @media (min-width: $screen-md-min) {
     display: none;
   }
 }
@@ -326,7 +327,7 @@
 // Menu position and menu carets
 .navbar-nav > li > .dropdown-menu {
   margin-top: 0;
-  @include border-top-radius(0);
+  // @include border-top-radius(0);
 }
 // Menu position and menu caret support for dropups via extra dropup class
 .navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {

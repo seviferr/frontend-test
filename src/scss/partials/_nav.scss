@@ -1,5 +1,183 @@
-body > aside{
-	background-color: $gray-lil-darker;
-	height: calc(100vh - #{$navbar-height});
+
+
+
+.main-nav{
+
+	header{
+		background-color: $darwin-gray5;
+		color:white;
+		color: $darwin-gray1;
+		font-size: 14px;
+		letter-spacing: 3px;
+		padding:10px;
+		user-select:none;
+
+		.icon-dots{
+
+			&:before{
+				font-size: 19px;
+				color: $darwin-gray12;
+				margin-right: 4px;
+			}
+
+		}
+	}
+
+	.list-group-item{
+		
+		&:hover,
+		&:active,
+		&:focus{
+
+
+			background-color: $body-bg;
+			color: #fff;
+		}
+
+	}
+
+
+
 
 }
+
+.secondary-nav{
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	background-color: $brand-info;
+
+	.list-group{
+		border-bottom:1px solid darken($brand-info, 10%);
+	}
+
+	a.list-group-item{
+		color:white;
+
+		&:hover,
+		&:active,
+		&:visited{
+			background-color: darken($brand-info, 10%);
+
+		}
+	}
+
+	.toggler{
+
+		text-align: left;
+
+		&.collapsed{
+			.close{
+				display: none;
+			}
+		}
+
+	}
+
+	#create-account-link{
+		margin-bottom: 10px;
+		margin-top: 10px;
+
+
+
+	}
+
+
+
+
+
+
+}
+
+
+
+
+
+
+.sidebar-active{
+
+	
+
+	@include respond-to(medium){
+		#sidebar{
+			left: 0;
+		}
+	}
+
+
+
+	@include respond-to(medium){
+		#main-content{
+			left: $sidebar-width;
+		}
+
+	}
+
+}
+
+
+.sidebar-active #sidebar-toggler .icon-bar {
+	background-color: #FFF;
+	opacity: 0;
+	background-color: $darwin-lightblue2;
+
+
+
+}
+
+.sidebar-active #sidebar-toggler .icon-bar:first-child {
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	position: relative;
+	top: 7px;
+	opacity: 1; 
+}
+.sidebar-active  #sidebar-toggler .icon-bar:last-child {
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	position: relative;
+	bottom: 5px;
+	top: auto;
+	opacity: 1; 
+}
+#sidebar-toggler .icon-bar {
+	position: relative;
+	opacity: 1; 
+
+		-webkit-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	transform: rotate(0deg);
+
+	// transition: 0.2s all ease-in-out;
+	
+
+	position: relative;
+	top:0;
+	left: 0;
+}
+
+#sidebar{
+	background-color: $darwin-gray6;
+	// height: calc(100vh - #{$navbar-height});
+	top: $navbar-height;
+	bottom: 0;
+	width: $sidebar-width;
+	position: fixed;
+	z-index: 10;
+
+
+	[class^="icon-"], [class*=" icon-"] {
+		margin-right: .7em;
+
+	}
+
+	@include respond-to(medium){
+		left: $sidebar-width * -1;
+	}
+
+
+	
+}
+

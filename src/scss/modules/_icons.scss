@@ -1,0 +1,106 @@
+@font-face {
+  font-family: 'darwin-icons';
+  src: url('../fonts/darwinex/darwin-icons.eot');
+  src: url('../fonts/darwinex/darwin-icons.woff') format('woff'),
+       url('../fonts/darwinex/darwin-icons.ttf') format('truetype'),
+       url('../fonts/darwinex/darwin-icons.svg#darwin-icons') format('svg'),
+       url('../fonts/darwinex/darwin-icons.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before, .btn-icon:before {
+  font-family: "darwin-icons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .4em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  /* margin-left: .4em; */
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+
+
+  
+
+}
+
+ [class^="icon-"], [class*=" icon-"] {
+
+
+&.orangeyellow:before{
+    color: $darwin-orangeyellow;
+  }
+
+
+  &.purple:before{
+    color: $darwin-purple;
+  }
+
+   &.green:before{
+    color: $darwin-green;
+  }
+
+
+   &.magenta:before{
+    color: $darwin-magenta;
+  }
+
+     &.orange:before{
+    color: $darwin-orange;
+  }
+
+   &.active:before{
+    color: $darwin-lightblue;
+  }
+
+
+}
+
+ 
+.icon-alldarwins:before { content: '\e800'; } /* '' */
+.icon-card:before { content: '\e801'; } /* '' */
+.icon-darwinia:before { content: '\e802'; } /* '' */
+.icon-explorar:before { content: '\e803'; } /* '' */
+.icon-folder:before { content: '\e810'; } /* '' */
+.icon-hall-offame:before { content: '\e805'; } /* '' */
+.icon-list:before { content: '\e806'; } /* '' */
+.icon-logo-darwinex:before { content: '\e807'; } /* '' */
+.icon-owl:before { content: '\e808'; } /* '' */
+.icon-performance:before { content: '\e809'; } /* '' */
+.icon-rebates:before { content: '\e80a'; } /* '' */
+.icon-widgets:before { content: '\e80b'; } /* '' */
+.icon-dots:before { content: '\e80c'; } /* '' */
+.icon-polygon1:before { content: '\e80d'; } /* '' */
+.icon-dollarball:before { content: '\e80e'; } /* '' */
+
+
+
+
+
+

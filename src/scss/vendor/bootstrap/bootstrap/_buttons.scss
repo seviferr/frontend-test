@@ -17,6 +17,8 @@
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: 1px solid transparent;
   white-space: nowrap;
+  transition:0.3s all ease-in-out;
+
   @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
   @include user-select(none);
 
@@ -51,6 +53,8 @@
     @include box-shadow(none);
   }
 
+
+
   // [converter] extracted a& to a.btn
 }
 
@@ -74,10 +78,33 @@ a.btn {
 // Success appears as green
 .btn-success {
   @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+  border-width: 2px;
+   box-shadow: none;
+   padding: $padding-small-vertical $padding-base-horizontal;
+   font-size: $font-size-small;
+
+  &:hover,
+  &:active,
+ &:focus
+  {
+    background-color: $btn-success-border;
+    color: $body-bg;
+    border-color: $darwin-brightgreen;
+    outline:0!important;
+
+  }
+
 }
 // Info appears as blue-green
 .btn-info {
   @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+
+  &:active,
+  &:focus{
+    background-color: $btn-info-bg;
+    border-color:$btn-info-border;
+  }
+
 }
 // Warning appears as orange
 .btn-warning {
@@ -139,6 +166,11 @@ a.btn {
 .btn-sm {
   // line-height: ensure proper height of button next to small input
   @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+  background-color: $btn-sm-bg;
+  color: $darwin-gray3;
+  &:hover{
+    background-color: darken($btn-sm-bg, 10%);
+  }
 }
 .btn-xs {
   @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
@@ -151,6 +183,9 @@ a.btn {
 .btn-block {
   display: block;
   width: 100%;
+
+  border-radius: 0px;
+
 }
 
 // Vertically space out multiple block buttons

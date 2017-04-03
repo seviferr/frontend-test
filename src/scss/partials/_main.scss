@@ -1,0 +1,343 @@
+
+
+
+
+body{
+	padding-top: $navbar-height;
+
+	&.sidebar-active{
+		overflow: hidden;
+	}
+}
+
+html{
+	&.sidebar-active{
+		overflow: hidden;
+
+		body{
+			overflow: hidden;
+		}
+	}
+}
+
+#main-content{
+	margin-left: 188px;
+	transition: 0.3s all ease-in-out;
+	position: relative;
+	left: 0;
+
+
+	@include respond-to(medium){
+		margin-left: 0px;
+	}
+
+
+	>section{
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+
+	.ameba-text{
+
+		padding: 17px 0px 13px;
+		margin: 10px 0px;
+		
+		.media-heading{
+			font-size: 13px;
+			color: $darwin-gray2;
+
+		}
+
+	}
+
+	.description{
+		max-width: 520px;
+		position: relative;
+
+		.toggler{
+			position: absolute;
+			right: -20px;
+			top: 5px;
+		}
+
+		position: relative;
+
+		&:after{
+
+
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+
+			width: 100%;
+			height: 14px;
+			
+			background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(32, 32, 32, 0)), color-stop(100%, $body-bg));
+			background-image: -moz-linear-gradient(rgba(32, 32, 32, 0), $body-bg);
+			background-image: -webkit-linear-gradient(rgba(32, 32, 32, 0), $body-bg);
+			background-image: linear-gradient(rgba(32, 32, 32, 0), $body-bg);
+
+		}
+
+		&.open{
+			&:after{
+				display: none;
+			}
+
+		}
+
+
+	}
+
+
+
+	#intro{
+		padding-bottom: 10px;
+		border-bottom:1px solid $darwin-gray4;
+		margin-bottom: 20px;
+
+		#user-dropdown{
+			cursor:pointer;
+			display: inline-block;
+			margin-left: 5px;
+
+			.divider{
+				margin:3px 0;
+			}
+
+
+			.dropdown-menu{
+				top:35px;
+				left:-5px;
+				font-size:12px;
+				min-width: 150px;
+
+				&:before{
+					right: auto;
+					left: 5px;
+				}
+
+				.score{
+
+					&:before{
+						color: $darwin-gray9;
+					}
+				}
+
+			}
+		}
+	}
+
+
+
+	#filters{
+
+		.darwin-switch{
+			padding: $navbar-padding-vertical $navbar-padding-vertical;
+			color:white;
+			border-right: 1px solid $darwin-gray4;
+
+		}
+
+		.icon-card:before{
+			margin-right: 0px;
+		}
+
+		.dropdown-toggle{
+			color:white;
+			border-left: 1px solid $darwin-gray4;
+			padding: $navbar-padding-vertical $navbar-padding-vertical*2;
+
+			.toggle-status{
+				color: $navbar-default-link-color;
+				margin-left: 6px;
+			}
+
+			&+.dropdown-menu{
+				right: 13px;
+
+			}
+		}
+
+		.navbar-nav>li{
+			min-width: 56px;
+		}
+
+		#order-by{
+
+			.dropdown-menu{
+			// right:10px;
+		}
+
+	}
+
+
+
+
+
+}
+
+
+
+#darwins-found{
+	margin-bottom: 20px;
+}
+
+
+
+.panel{
+
+	.panel-heading{
+		padding:10px 6px;
+	}
+
+	.walk-away{
+		max-width: 80%;
+		margin: auto;
+		display: block;
+	}
+
+	.list-group-item{
+		border-color: $darwin-gray4;
+		color: $darwin-gray2;
+		padding: 10px 6px;
+	}
+
+
+	.order{
+		color:$darwin-gray10;
+	}
+
+	.trade{
+		color: $darwin-brightgreen;
+		font-size: 13px;
+
+		.trade-value{
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+
+	.folder{
+		margin:0;
+		font-size: 20px;
+		margin-top: 10px;
+	}
+
+	.invested{
+		color:#FFF;
+	}
+
+
+
+	.score{
+		color: #FFF;
+		&:before{
+			color: $darwin-gray11;
+		}
+	}
+
+	.positive{
+		color: $darwin-brightgreen;
+	}
+
+	.negative{
+		color: $darwin-red;
+	}
+
+
+}
+
+	// List and carouse mode
+	#cards{
+
+		&[data-view-mode='carousel']{
+
+			#set-carousel-view{
+				color: $navbar-default-link-active-color;
+				background-color: $navbar-default-link-active-bg;
+			}
+
+		}
+
+		
+		&[data-view-mode='list']{
+
+			#set-list-view{
+				color: $navbar-default-link-active-color;
+				background-color: $navbar-default-link-active-bg;
+			}
+
+			.panel{
+				
+				.graph{
+					display: none;
+				}
+
+
+
+				.panel-heading,
+				.panel-body,
+				.list-group,
+				.list-group-item{
+					display: inline-block;
+					vertical-align: middle;
+				}
+
+				.list-group{
+					float: right;
+					margin-top: 5px;
+
+					@include respond-to(1130){
+						float: none;
+						margin: 0;
+					}
+				}
+
+				.invested{
+					margin-left: 15px;
+				}
+
+				.list-group-item{
+					border-top:0px;
+					border-bottom:0px;
+					border-right: 1px solid $darwin-gray4;
+					padding-right: 8px;
+
+					&:last-child{
+						border:0px;
+					}
+				}
+				
+				.panel-heading{
+					width: 220px;
+				}
+
+				.folder{
+					width: 62px;
+					margin-top:0px;
+				}
+
+				.trade{
+					margin-left: 16px;
+				}
+
+			}
+
+		}
+
+		
+		
+
+	}	
+
+
+
+
+
+	
+
+
+
+}

@@ -1,4 +1,38 @@
 body > header{
 	background-color: black;
 	height: $navbar-height;
+	position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 10;
+
+	@include respond-to(medium){
+		text-align: center;
+
+	}
+
+	.navbar-toggle{
+		float: none;
+		position: absolute;
+		left: 0;
+	}
+}
+
+body > header h1 > img{
+
+  @include navbar-vertical-align(25px);
+  margin-left: 5px;
+
+  @include respond-to(medium){
+		margin:0;
+
+	}
+
+}
+
+
+body > header h1{
+
+ margin:0;
+
 }

@@ -1,15 +1,104 @@
-::selection{
-  background: #333;
-  color: #fff;
-  text-shadow: none;
+
+
+.colorball{
+	background: $darwin-turquoise;
+	border-radius: 50%;
+	padding: 20px;
+	color:white;
 }
-::-moz-selection{
-  background: #333;
-  color: #fff;
-  text-shadow: none;
+
+.miniball{
+	    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    line-height: 15px;
+    margin-right: 7px;
+	    text-align: center;
+    font-size: 11px;
+    vertical-align: middle;
+
+    &.orangeyellow{
+    background-color: $darwin-orangeyellow;
+  }
+
+
+  &.purple{
+    background-color: $darwin-purple;
+  }
+
+   &.green{
+    background-color: $darwin-green;
+  }
+
+
+   &.magenta{
+    background-color: $darwin-magenta;
+  }
+
+     &.orange{
+    background-color: $darwin-orange;
+  }
+
+   &.active{
+    background-color: $darwin-lightblue;
+  }
+
+
 }
-::-webkit-selection{
-  background: #333;
-  color: #fff;
-  text-shadow: none;
-}
+
+
+	.toggler{
+		text-decoration: none;
+
+			&:hover,
+			&:focus,
+			&:active
+			{
+				text-decoration: none;
+			}
+			
+			.toggle-status{
+				display: block;
+			}
+
+			&.collapsed .toggle-status{
+			
+			transform: rotate(180deg);
+
+			}
+
+		}
+
+
+	.dropdown{
+	
+
+		&.open{
+			
+			.toggle-status:before{
+				    content: "\e014";
+			}
+
+
+		}
+	}
+
+
+	.polygon-text{
+			background-image: url(../img/polygon1.svg);
+			width: 21px;
+			height: 21px;
+			padding: 3px;
+			font-size: 10px;
+			color: $darwin-gray6;
+			text-align: center;
+			user-select:none;
+			background-repeat: no-repeat;
+			    margin-top: 4px;
+
+		}
+
+	
+
+

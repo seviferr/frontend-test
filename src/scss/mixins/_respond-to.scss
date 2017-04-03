@@ -22,4 +22,12 @@
       @content;
     }
   }
+
+  @else  {
+    @media (max-width: $breakpoint + "px") {
+      @content;
+    }
+  }
+
+  
 }

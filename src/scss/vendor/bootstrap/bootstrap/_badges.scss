@@ -7,7 +7,7 @@
 .badge {
   display: inline-block;
   min-width: 10px;
-  padding: 3px 7px;
+  padding: 3px 4px;
   font-size: $font-size-small;
   font-weight: $badge-font-weight;
   color: $badge-color;
@@ -17,10 +17,16 @@
   text-align: center;
   background-color: $badge-bg;
   border-radius: $badge-border-radius;
+  user-select:none;
+  transition:0.4s all ease-in-out;
 
   // Empty badges collapse automatically (not available in IE8)
   &:empty {
     display: none;
+  }
+  &:hover{
+    background-color: $badge-color;
+    color: $badge-bg;
   }
 
   // Quick fix for badges in buttons

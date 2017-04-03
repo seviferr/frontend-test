@@ -10,18 +10,42 @@ $bootstrap-sass-asset-helper: false !default;
 
 $gray-base:              #000 !default;
 $gray-darker:            lighten($gray-base, 13.5%) !default; // #222
-$gray-lil-darker:        #2D2D2D !default;
 $gray-dark:              lighten($gray-base, 20%) !default;   // #333
 $gray:                   lighten($gray-base, 33.5%) !default; // #555
 $gray-light:             lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
+$darwin-gray1:	 		 #D8D8D8 !default;
+$darwin-gray2:     		 #ADAFB2 !default;
+$darwin-gray3:     		 #4A4A4A !default;
+$darwin-gray4:			 #505050 !default;
+$darwin-gray5:             #373737;
+$darwin-gray6:        #2D2D2D !default;
+$darwin-gray7:        rgba(32, 32, 32, 0.5) !default;
+$darwin-gray8: 		#6C6C6C !default;
+$darwin-gray9:       #C0C0C0 !default;
+$darwin-gray10:		#979797 !default;
+$darwin-gray11:		#606060 !default;
+$darwin-gray12:		#5A5A5A !default;
+
 $brand-primary:         darken(#428bca, 6.5%) !default; // #337ab7
 $brand-success:         #5cb85c !default;
-$brand-info:            #5bc0de !default;
+$brand-info:            #3DA0CC !default;
 $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
 
+
+$darwin-turquoise:       #67D2C8 !default;
+$darwin-lightblue:       #00C9FF !default;
+$darwin-lightblue2:       #00b0ff !default;
+
+$darwin-orangeyellow:    #EFAA42 !default;
+$darwin-orange:			  #FB6533 !default;
+$darwin-purple:			 #BCA5D1 !default;
+$darwin-magenta:		  #D267C6 !default;
+$darwin-green:			 #7ED321 !default;
+$darwin-brightgreen:     #AAFF00 !default;
+$darwin-red:			 #FF4141 !default;
 
 //== Scaffolding
 //
@@ -30,10 +54,10 @@ $brand-danger:          #d9534f !default;
 //** Background color for `<body>`.
 $body-bg:               #202020 !default;
 //** Global text color on `<body>`.
-$text-color:            $gray-dark !default;
+$text-color:            $darwin-gray1 !default;
 
 //** Global textual link color.
-$link-color:            $brand-primary !default;
+$link-color:            #FFF !default;
 //** Link hover color set via `darken()` function.
 $link-hover-color:      darken($link-color, 15%) !default;
 //** Link hover decoration.
@@ -44,7 +68,7 @@ $link-hover-decoration: underline !default;
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif:  "Open Sans", Helvetica, Arial, sans-serif !default;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
@@ -89,6 +113,7 @@ $icon-font-name:          "glyphicons-halflings-regular" !default;
 $icon-font-svg-id:        "glyphicons_halflingsregular" !default;
 
 
+
 //== Components
 //
 //## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
@@ -99,8 +124,8 @@ $padding-base-horizontal:   12px !default;
 $padding-large-vertical:    10px !default;
 $padding-large-horizontal:  16px !default;
 
-$padding-small-vertical:    5px !default;
-$padding-small-horizontal:  10px !default;
+$padding-small-vertical:    0px !default;
+$padding-small-horizontal:  15px !default;
 
 $padding-xs-vertical:       1px !default;
 $padding-xs-horizontal:     5px !default;
@@ -110,7 +135,7 @@ $line-height-small:         1.5 !default;
 
 $border-radius-base:        4px !default;
 $border-radius-large:       6px !default;
-$border-radius-small:       3px !default;
+$border-radius-small:       15px !default;
 
 //** Global color for active items (e.g., navs or dropdowns).
 $component-active-color:    #fff !default;
@@ -159,12 +184,12 @@ $btn-primary-bg:                 $brand-primary !default;
 $btn-primary-border:             darken($btn-primary-bg, 5%) !default;
 
 $btn-success-color:              #fff !default;
-$btn-success-bg:                 $brand-success !default;
-$btn-success-border:             darken($btn-success-bg, 5%) !default;
+$btn-success-bg:                 transparent !default;
+$btn-success-border:             $darwin-brightgreen !default;
 
 $btn-info-color:                 #fff !default;
 $btn-info-bg:                    $brand-info !default;
-$btn-info-border:                darken($btn-info-bg, 5%) !default;
+$btn-info-border:                $brand-info !default;
 
 $btn-warning-color:              #fff !default;
 $btn-warning-bg:                 $brand-warning !default;
@@ -176,8 +201,11 @@ $btn-danger-border:              darken($btn-danger-bg, 5%) !default;
 
 $btn-link-disabled-color:        $gray-light !default;
 
+
+$btn-sm-bg:						 #fff !default;
+
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius-base:         $border-radius-base !default;
+$btn-border-radius-base:         $border-radius-small !default;
 $btn-border-radius-large:        $border-radius-large !default;
 $btn-border-radius-small:        $border-radius-small !default;
 
@@ -330,7 +358,7 @@ $screen-md-max:              ($screen-lg-min - 1) !default;
 //** Number of columns in the grid.
 $grid-columns:              12 !default;
 //** Padding between columns. Gets divided in half for the left and right.
-$grid-gutter-width:         0px !default;
+$grid-gutter-width:         10px !default;
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.
 $grid-float-breakpoint:     $screen-sm-min !default;
@@ -365,21 +393,21 @@ $container-lg:                 $container-large-desktop !default;
 // Basics of a navbar
 $navbar-height:                    50px !default;
 $navbar-margin-bottom:             $line-height-computed !default;
-$navbar-border-radius:             $border-radius-base !default;
+$navbar-border-radius:             0px !default;
 $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
 $navbar-collapse-max-height:       340px !default;
 
-$navbar-default-color:             #777 !default;
-$navbar-default-bg:                #f8f8f8 !default;
+$navbar-default-color:             #fff !default;
+$navbar-default-bg:                $darwin-gray5 !default;
 $navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
 
 // Navbar links
-$navbar-default-link-color:                #777 !default;
-$navbar-default-link-hover-color:          #333 !default;
-$navbar-default-link-hover-bg:             transparent !default;
-$navbar-default-link-active-color:         #555 !default;
-$navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
+$navbar-default-link-color:                $darwin-gray8 !default;
+$navbar-default-link-hover-color:          $darwin-lightblue !default;
+$navbar-default-link-hover-bg:             $darwin-gray7 !default;
+$navbar-default-link-active-color:         $darwin-lightblue !default;
+$navbar-default-link-active-bg:            $darwin-gray7 !default;
 $navbar-default-link-disabled-color:       #ccc !default;
 $navbar-default-link-disabled-bg:          transparent !default;
 
@@ -517,6 +545,9 @@ $state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) 
 $state-danger-text:              #a94442 !default;
 $state-danger-bg:                #f2dede !default;
 $state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
+
+// Sidebar
+$sidebar-width: 				188px !default;
 
 
 //== Tooltips
@@ -675,11 +706,11 @@ $progress-bar-info-bg:        $brand-info !default;
 //##
 
 //** Background color on `.list-group-item`
-$list-group-bg:                 #fff !default;
+$list-group-bg:                 transparent !default;
 //** `.list-group-item` border color
 $list-group-border:             #ddd !default;
 //** List group border radius
-$list-group-border-radius:      $border-radius-base !default;
+$list-group-border-radius:      0px !default;
 
 //** Background color of single list items on hover
 $list-group-hover-bg:           #f5f5f5 !default;
@@ -708,19 +739,19 @@ $list-group-link-heading-color: #333 !default;
 //
 //##
 
-$panel-bg:                    #fff !default;
-$panel-body-padding:          15px !default;
+$panel-bg:                    $darwin-gray6 !default;
+$panel-body-padding:          10px 6px !default;
 $panel-heading-padding:       10px 15px !default;
 $panel-footer-padding:        $panel-heading-padding !default;
-$panel-border-radius:         $border-radius-base !default;
+$panel-border-radius:         0px !default;
 
 //** Border color for elements within panels
 $panel-inner-border:          #ddd !default;
 $panel-footer-bg:             #f5f5f5 !default;
 
-$panel-default-text:          $gray-dark !default;
-$panel-default-border:        #ddd !default;
-$panel-default-heading-bg:    #f5f5f5 !default;
+$panel-default-text:          #FFF !default;
+$panel-default-border:        transparent !default;
+$panel-default-heading-bg:    $darwin-gray6 !default;
 
 $panel-primary-text:          #fff !default;
 $panel-primary-border:        $brand-primary !default;
@@ -774,10 +805,10 @@ $well-border:                 darken($well-bg, 7%) !default;
 //
 //##
 
-$badge-color:                 #fff !default;
+$badge-color:                 $darwin-lightblue !default;
 //** Linked badge text color on hover
 $badge-link-hover-color:      #fff !default;
-$badge-bg:                    $gray-light !default;
+$badge-bg:                    $darwin-gray4 !default;
 
 //** Badge text color in active nav link
 $badge-active-color:          $link-color !default;
@@ -786,7 +817,7 @@ $badge-active-bg:             #fff !default;
 
 $badge-font-weight:           bold !default;
 $badge-line-height:           1 !default;
-$badge-border-radius:         10px !default;
+$badge-border-radius:         2px !default;
 
 
 //== Breadcrumbs
@@ -826,8 +857,8 @@ $carousel-caption-color:                      #fff !default;
 //
 //##
 
-$close-font-weight:           bold !default;
-$close-color:                 #000 !default;
+$close-font-weight:           normal !default;
+$close-color:                 #fff !default;
 $close-text-shadow:           0 1px 0 #fff !default;
 
 
