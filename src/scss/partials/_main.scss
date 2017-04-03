@@ -140,7 +140,7 @@ html{
 
 		}
 
-		.icon-card:before{
+		.icon-card:before, .icon-carousel-mode:before{
 			margin-right: 0px;
 		}
 
@@ -259,6 +259,17 @@ html{
 				background-color: $navbar-default-link-active-bg;
 			}
 
+			.item{
+				
+				transition: 0.8s all ease-in-out;
+
+				&.loading{
+						opacity: 0;
+						transform: translateX(40px);
+						-webkit-transform: translateX(40px);
+				}
+			}
+
 		}
 
 		
@@ -333,6 +344,17 @@ html{
 
 			}
 
+			.item{
+				
+				transition: 0.8s all ease-in-out;
+
+				&.loading{
+						opacity: 0;
+						transform: translatey(40px);
+						-webkit-transform: translatey(40px);
+				}
+			}
+
 		}
 
 
@@ -347,7 +369,18 @@ html{
 				@include make-sm-column(4);
 				@include make-lg-column(3);
 			}
-		
+
+			.item{
+				
+				transition: 0.8s all ease-in-out;
+
+				&.loading{
+						opacity: 0;
+						transform: translateX(40px);
+						-webkit-transform: translateX(40px);
+				}
+			}
+
 		}
 
 

@@ -44,9 +44,24 @@
 		
 	}
 
+	var progressiveAnimation = function(element) {
+		$(this)
+		.addClass('loading')
+		.delay(70 * $(this).index())
+		.queue(function() {
+			$(this).dequeue().removeClass('loading')
+		})
+	}
+
+	function mycallback(){
+		console.log("asdadad");
+	}
+
 	$("#sidebar-toggler").click(function(){
 		$("html").toggleClass("sidebar-active");
 	});
+
+
 
 
 	// setCards();
@@ -76,6 +91,7 @@
 	$('#set-list-view').click(function(){
 		$('#cards').attr('data-view-mode', 'list');
 		$('.owl-carousel').owlCarousel('destroy');
+		$('.owl-carousel').find('.item').each(progressiveAnimation);
 	});
 
 	$('#set-carousel-view').click(function(){
@@ -100,13 +116,20 @@
 			}
 		});
 
+
+
+
+
+
+
 	});
 
 	$('#set-grid-view').click(function(){
 		$('#cards').attr('data-view-mode', 'grid');
 		$('.owl-carousel').owlCarousel('destroy');
 
-		// $('.owl-carousel').trigger('remove.owl.carousel', [0]);
+		$('.owl-carousel').find('.item').each(progressiveAnimation);
+		
 
 	});
 
@@ -116,22 +139,32 @@
 	});
 
 
+	/* animate filter */
+	var owlAnimateFilter = function(even) {
+		$(this)
+		.addClass('__loading')
+		.delay(70 * $(this).parent().index())
+		.queue(function() {
+			$(this).dequeue().removeClass('__loading')
+		})
+	}
+
+
 	// $('#in-portfolio').on('change', function(){
 		
 
 	// 	if($(this).prop("checked") === true){
-			
-	// 		$(".in-portfolio").css("display", "block");
-	// 		$('.owl-carousel').trigger('add.owl.carousel', [1, 2]);
 
+	// 		var filter_data = ".in-portfolio";
 
 	// 	}else{
-	// 		$(".in-portfolio").css("display", "none");
-	// 		$('.owl-carousel').trigger('remove.owl.carousel', [1, 2]);
 
-			
+	// 		var filter_data = "*";
+
+
 	// 	}
 
+	// 	console.log($('.owl-carousel').owlFilter());
 
 
 
@@ -140,7 +173,8 @@
 
 
 
-	
+
+
 
 
 	//Drawing svg graphs
