@@ -5835,7 +5835,7 @@ button.close {
 
 /* '' */
 .icon-folder:before {
-  content: '\e810'; }
+  content: '\e811'; }
 
 /* '' */
 .icon-hall-offame:before {
@@ -5878,6 +5878,10 @@ button.close {
   content: '\e80e'; }
 
 /* '' */
+.icon-carousel-mode:before {
+  content: '\e810'; }
+
+/* '' */
 .colorball {
   background: #67D2C8;
   border-radius: 50%;

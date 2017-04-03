@@ -116,27 +116,26 @@
 	});
 
 
-	$('#in-portfolio').on('change', function(){
+	// $('#in-portfolio').on('change', function(){
 		
-		// var inPortfolio = $(".in-portfolio");
 
-		if($(this).prop("checked") === true){
+	// 	if($(this).prop("checked") === true){
 			
-			$(".in-portfolio").css("display", "block");
-			$('.owl-carousel').trigger('add.owl.carousel', [1, 2]);
+	// 		$(".in-portfolio").css("display", "block");
+	// 		$('.owl-carousel').trigger('add.owl.carousel', [1, 2]);
 
 
-		}else{
-			$(".in-portfolio").css("display", "none");
-			$('.owl-carousel').trigger('remove.owl.carousel', [1, 2]);
+	// 	}else{
+	// 		$(".in-portfolio").css("display", "none");
+	// 		$('.owl-carousel').trigger('remove.owl.carousel', [1, 2]);
 
 			
-		}
+	// 	}
 
 
 
 
-	});
+	// });
 
 
 
