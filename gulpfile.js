@@ -8,7 +8,6 @@ header  = require('gulp-header'),
 rename = require('gulp-rename'),
 cssnano = require('gulp-cssnano'),
 sourcemaps = require('gulp-sourcemaps'),
-imagemin = require('gulp-imagemin'),
 package = require('./package.json');
 
 
@@ -51,14 +50,6 @@ gulp.task('js',function(){
   .pipe(browserSync.reload({stream:true, once: true}));
 });
 
-gulp.task('images', function() {
-  gulp.src('src/img/*')
-  .pipe(imagemin())
-  .pipe(gulp.dest('app/assets/img'));
-});
-
-
-
 gulp.task('browser-sync', function() {
     browserSync.init(null, {
         server: {
@@ -70,10 +61,9 @@ gulp.task('bs-reload', function () {
     browserSync.reload();
 });
 
-gulp.task('default', ['css', 'js', 'images', 'browser-sync'], function () {
+gulp.task('default', ['css', 'js', 'browser-sync'], function () {
   gulp.watch("src/scss/style.scss", ['css']);
   gulp.watch("src/scss/**/*.scss", ['css']);
-  gulp.watch("src/img/*", ['images']);
   gulp.watch("src/js/scripts.js", ['js']);
   gulp.watch("app/*.html", ['bs-reload']);
 });

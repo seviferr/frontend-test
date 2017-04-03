@@ -13,10 +13,6 @@
 
 	var ANIMATION_TIME = 1200;
 
-	// function formatNumberPoint(x) {
-	// 	return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-	// }
-
 	function numberAnimation(element, time, decimalPlaces){
 
 		var maxValueText = element.html();
@@ -32,7 +28,7 @@
 
 
 			if (currentValue >= maxValue) {
-			
+
 				setTimeout(function(){
 					element.html(maxValue);
 
@@ -53,26 +49,41 @@
 
 		}, speed);
 
+		
+	}
+
+	function setCards(){
 
 		
 
-		
+		$.ajax({
+			url: 'assets/js/cards-data.json',
+			dataType: 'json',
+			success: function(data){
+				
+				console.log(data);
+
+				
+				
+				$('.owl-carousel').html("hola");
 
 
-		// console.log('maxValue: ' + maxValue);	
-		// console.log('speed: ' + speed);	
-		// console.log('time: ' + time);	
-		// console.log('addQuantity: ' + addQuantity);	
+			}
+		});
 
-		
+
+
+
 	}
 
 
 	$("#sidebar-toggler").click(function(){
-
 		$("html").toggleClass("sidebar-active");
-
 	});
+
+
+	// setCards();
+
 
 
 
@@ -124,30 +135,40 @@
 
 	});
 
+	$('#set-grid-view').click(function(){
+		$('#cards').attr('data-view-mode', 'grid');
+		$('.owl-carousel').owlCarousel('destroy');
 
-	$(".toggler[data-target='#read-more']").click(function(){
-		console.log("asd");
-		$(this).closest('.description').toggleClass("open");
+		// $('.owl-carousel').trigger('remove.owl.carousel', [0]);
+
+
+
+
 	});
-		
+
+
+	$('.toggler[data-target="#read-more"]').click(function(){
+		$(this).closest('.description').toggleClass('open');
+	});
+
+
+
 	
 
 
-
+	//Drawing svg graphs
 	var svg = new Walkway({
 		selector: '.walk-away',
 		duration: ANIMATION_TIME,
 		easing: 'linear'
 	});
-
-
 	svg.draw();
 
+
+	//Animate numbers to increase until its final value is reached
 	var animatedNumbers = $('.animated-number');
-
 	animatedNumbers.each(function(){
-
-		numberAnimation($(this), ANIMATION_TIME, $(this).attr("data-decimals"));
+		numberAnimation($(this), ANIMATION_TIME, $(this).attr('data-decimals'));
 	});
 
 

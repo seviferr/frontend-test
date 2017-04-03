@@ -6088,7 +6088,8 @@ body > header h1 {
   bottom: 0;
   width: 188px;
   position: fixed;
-  z-index: 10; }
+  z-index: 10;
+  transition: all .3s ease-in-out; }
   #sidebar [class^="icon-"], #sidebar [class*=" icon-"] {
     margin-right: .7em; }
   @media (max-width: 992px) {
@@ -6228,11 +6229,15 @@ html.sidebar-active {
   #main-content #cards[data-view-mode='list'] .panel .list-group {
     float: right;
     margin-top: 5px; }
-    @media (max-width: 1130px) {
+    @media (max-width: 1175px) {
       #main-content #cards[data-view-mode='list'] .panel .list-group {
         float: none;
         margin: 0; } }
   #main-content #cards[data-view-mode='list'] .panel .invested {
+    margin-left: 15px; }
+  #main-content #cards[data-view-mode='list'] .panel .return {
+    margin-left: 15px; }
+  #main-content #cards[data-view-mode='list'] .panel .drawdown {
     margin-left: 15px; }
   #main-content #cards[data-view-mode='list'] .panel .list-group-item {
     border-top: 0px;
@@ -6248,3 +6253,23 @@ html.sidebar-active {
     margin-top: 0px; }
   #main-content #cards[data-view-mode='list'] .panel .trade {
     margin-left: 16px; }
+  #main-content #cards[data-view-mode='grid'] #set-grid-view {
+    color: #00C9FF;
+    background-color: rgba(32, 32, 32, 0.5); }
+  #main-content #cards[data-view-mode='grid'] .item {
+    position: relative;
+    min-height: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 5px;
+    padding-right: 5px; }
+    @media (min-width: 768px) {
+      #main-content #cards[data-view-mode='grid'] .item {
+        float: left;
+        width: 33.33333%; } }
+    @media (min-width: 1200px) {
+      #main-content #cards[data-view-mode='grid'] .item {
+        float: left;
+        width: 25%; } }

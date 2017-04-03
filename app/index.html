@@ -19,7 +19,6 @@
 
   <link rel="shortcut icon" href="assets/img/favicon.ico" rel="stylesheet">
 
-  <script src="assets/components/modernizr/modernizr.js"></script>
 
 
 </head> 
@@ -141,14 +140,15 @@
 
     <div>
       <ul class="nav navbar-nav">
-        <li class="text-center"><a id="set-list-view" href="#"><span class="icon-list"></span></a></li>
-        <li  class="text-center"><a id="set-carousel-view" href="#"><span class="icon-card"></span></a></li>
+        <li class="text-center"><a id="set-list-view" href="#" title="View as list"><span class="icon-list"></span></a></li>
+        <li  class="text-center"><a id="set-grid-view" href="#" title="View as grid"><span class="icon-card"></span></a></li>
+        <li  class="text-center"><a id="set-carousel-view" href="#" title="View as carousel"><img width="18" src="assets/img/carousel-mode.svg" alt=""></a></li>
         <li>
 
           <div class="darwin-switch">
             In portfolio
             <input class="collapse" id="in-portfolio" name="in-portfolio" type="checkbox" checked>
-            <label for="in-portfolio" class="label-default"></label>
+            <label for="in-portfolio" class="label-default" title="View items in portfolio only"></label>
           </div>
           
         </li>
@@ -156,7 +156,7 @@
 
       <ul id="order-by" class="nav navbar-nav navbar-right">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Order by Return <span class="glyphicon glyphicon-chevron-down toggle-status"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Order by Return <span class="glyphicon glyphicon-chevron-down toggle-status"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">Inversión</a></li>
             <li><a href="#">Retorno</a></li>
@@ -338,7 +338,10 @@
         </div>
       </div>
 
-       <div class="item">
+
+
+
+      <div class="item">
        
         <div class="panel panel-default">
           <div class="panel-heading">
@@ -351,14 +354,14 @@
             </span>
           </div>
           <div class="panel-body">
-
-             <svg class="graph walk-away" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            
+            <svg class="graph walk-away" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         viewBox="0 0 174 63" style="enable-background:new 0 0 174 63;" xml:space="preserve">
         <style type="text/css">
-        .st3{fill:none;stroke:#D267C6;stroke-width:2;}
+        .st0{fill:none;stroke:#D267C6;stroke-width:2;}
         </style>
         <desc>Created with Sketch.</desc>
-        <path class="st3" d="M0,50.4l3.7-1.4l6.8-3.6l5.9-41.4l7.3,0.4L30.6,0l7.5,6.1l5.7-4.6l6,8.6l7.6,5.3l5.8-2l4.4,4.3l4.8-3.3l7.8,1.7
+        <path class="st0" d="M0,50.4l3.7-1.4l6.8-3.6l5.9-41.4l7.3,0.4L30.6,0l7.5,6.1l5.7-4.6l6,8.6l7.6,5.3l5.8-2l4.4,4.3l4.8-3.3l7.8,1.7
         l4-2.4l7.1,8.5l3.4,12.7l7.4,1.9l6.2,2.4l4.5-3.7l6.2,12.4l6.6,6.3l6.2-9.5l8,5.5l4.5,7.8l7.7-23.6l9.3-0.2l5,2.7l5.5-4.5"/>
       </svg>
 
@@ -371,7 +374,7 @@
             </p>
           </div>
 
-           <ul class="list-group">
+          <ul class="list-group">
             <li class="list-group-item">CAPITAL INVERTIDO <span class="pull-right invested">$ <span class="animated-number" data-decimals="2">12000</span></span></li>
               <li class="list-group-item">RETORNO <span class="pull-right return positive"><span class="animated-number" data-decimals="1">7</span>%</span></li>
               <li class="list-group-item">DRAWDOWN <span class="pull-right drawdown negative">-<span class="animated-number" data-decimals="1">37</span>%</span></li>
@@ -394,13 +397,13 @@
           </div>
           <div class="panel-body">
 
-              <svg class="graph walk-away" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             <svg class="graph walk-away" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         viewBox="0 0 174 63" style="enable-background:new 0 0 174 63;" xml:space="preserve">
         <style type="text/css">
-        .st4{fill:none;stroke:#D267C6;stroke-width:2;}
+        .st01{fill:none;stroke:#EFAA42;stroke-width:2;}
         </style>
         <desc>Created with Sketch.</desc>
-        <path class="st4" d="M0,50.4l3.7-1.4l6.8-3.6l5.9-41.4l7.3,0.4L30.6,0l7.5,6.1l5.7-4.6l6,8.6l7.6,5.3l5.8-2l4.4,4.3l4.8-3.3l7.8,1.7
+        <path fill="#D267C6" class="st01" d="M0,50.4l3.7-1.4l6.8-3.6l5.9-41.4l7.3,0.4L30.6,0l7.5,6.1l5.7-4.6l6,8.6l7.6,5.3l5.8-2l4.4,4.3l4.8-3.3l7.8,1.7
         l4-2.4l7.1,8.5l3.4,12.7l7.4,1.9l6.2,2.4l4.5-3.7l6.2,12.4l6.6,6.3l6.2-9.5l8,5.5l4.5,7.8l7.7-23.6l9.3-0.2l5,2.7l5.5-4.5"/>
       </svg>
 
@@ -411,8 +414,7 @@
 
             </p>
           </div>
-
-           <ul class="list-group">
+  <ul class="list-group">
             <li class="list-group-item">CAPITAL INVERTIDO <span class="pull-right invested">$ <span class="animated-number" data-decimals="2">12000</span></span></li>
               <li class="list-group-item">RETORNO <span class="pull-right return positive"><span class="animated-number" data-decimals="1">7</span>%</span></li>
               <li class="list-group-item">DRAWDOWN <span class="pull-right drawdown negative">-<span class="animated-number" data-decimals="1">37</span>%</span></li>
@@ -425,7 +427,7 @@
        
         <div class="panel panel-default">
           <div class="panel-heading">
-             <span class="miniball orange"></span>BWE
+             <span class="miniball orange">$</span>BWE
              <span class="order">#12</span>
             <span class="trade pull-right">
               <span class="trade-value">180.22</span>
@@ -438,13 +440,13 @@
               <svg class="graph walk-away" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         viewBox="0 0 174 63" style="enable-background:new 0 0 174 63;" xml:space="preserve">
         <style type="text/css">
-        .st5{fill:none;stroke:#D267C6;stroke-width:2;}
+        .st1{fill:none;stroke:#FB6533;stroke-width:2;}
         </style>
         <desc>Created with Sketch.</desc>
-        <path class="st5" d="M0,50.4l3.7-1.4l6.8-3.6l5.9-41.4l7.3,0.4L30.6,0l7.5,6.1l5.7-4.6l6,8.6l7.6,5.3l5.8-2l4.4,4.3l4.8-3.3l7.8,1.7
+        <path class="st1" d="M0,50.4l3.7-1.4l6.8-3.6l5.9-41.4l7.3,0.4L30.6,0l7.5,6.1l5.7-4.6l6,8.6l7.6,5.3l5.8-2l4.4,4.3l4.8-3.3l7.8,1.7
         l4-2.4l7.1,8.5l3.4,12.7l7.4,1.9l6.2,2.4l4.5-3.7l6.2,12.4l6.6,6.3l6.2-9.5l8,5.5l4.5,7.8l7.7-23.6l9.3-0.2l5,2.7l5.5-4.5"/>
       </svg>
-
+      
 
             <p class="folder">
               <span class="btn-icon"></span>
@@ -453,7 +455,7 @@
             </p>
           </div>
 
-           <ul class="list-group">
+            <ul class="list-group">
             <li class="list-group-item">CAPITAL INVERTIDO <span class="pull-right invested">$ <span class="animated-number" data-decimals="2">12000</span></span></li>
               <li class="list-group-item">RETORNO <span class="pull-right return positive"><span class="animated-number" data-decimals="1">7</span>%</span></li>
               <li class="list-group-item">DRAWDOWN <span class="pull-right drawdown negative">-<span class="animated-number" data-decimals="1">37</span>%</span></li>
@@ -475,14 +477,14 @@
             </span>
           </div>
           <div class="panel-body">
-            
-                 <svg class="graph walk-away" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           
+              <svg class="graph walk-away" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         viewBox="0 0 174 63" style="enable-background:new 0 0 174 63;" xml:space="preserve">
         <style type="text/css">
-        .st6{fill:none;stroke:#D267C6;stroke-width:2;}
+        .st2{fill:none;stroke:#BCA5D1;stroke-width:2;}
         </style>
         <desc>Created with Sketch.</desc>
-        <path class="st6" d="M0,50.4l3.7-1.4l6.8-3.6l5.9-41.4l7.3,0.4L30.6,0l7.5,6.1l5.7-4.6l6,8.6l7.6,5.3l5.8-2l4.4,4.3l4.8-3.3l7.8,1.7
+        <path class="st2" d="M0,50.4l3.7-1.4l6.8-3.6l5.9-41.4l7.3,0.4L30.6,0l7.5,6.1l5.7-4.6l6,8.6l7.6,5.3l5.8-2l4.4,4.3l4.8-3.3l7.8,1.7
         l4-2.4l7.1,8.5l3.4,12.7l7.4,1.9l6.2,2.4l4.5-3.7l6.2,12.4l6.6,6.3l6.2-9.5l8,5.5l4.5,7.8l7.7-23.6l9.3-0.2l5,2.7l5.5-4.5"/>
       </svg>
 
@@ -501,6 +503,14 @@
           </ul>
         </div>
       </div>
+
+       
+    
+       
+
+         
+
+         
 
 
        </div>

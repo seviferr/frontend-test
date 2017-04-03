@@ -14,7 +14,7 @@
   position: relative;
   z-index: 1; }
 
-  #cards[data-view-mode='list'] .owl-carousel{
+  #cards[data-view-mode='list'] .owl-carousel, #cards[data-view-mode='grid'] .owl-carousel{
     display: block;
     }
   .owl-carousel .owl-stage {

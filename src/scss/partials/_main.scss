@@ -289,13 +289,21 @@ html{
 					float: right;
 					margin-top: 5px;
 
-					@include respond-to(1130){
+					@include respond-to(1175){
 						float: none;
 						margin: 0;
 					}
 				}
 
 				.invested{
+					margin-left: 15px;
+				}
+
+				.return{
+					margin-left: 15px;
+				}
+
+				.drawdown{
 					margin-left: 15px;
 				}
 
@@ -326,6 +334,22 @@ html{
 			}
 
 		}
+
+
+		&[data-view-mode='grid']{
+
+			#set-grid-view{
+				color: $navbar-default-link-active-color;
+				background-color: $navbar-default-link-active-bg;
+			}
+
+			.item{
+				@include make-sm-column(4);
+				@include make-lg-column(3);
+			}
+		
+		}
+
 
 		
 		
