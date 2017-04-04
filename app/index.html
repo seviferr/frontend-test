@@ -39,7 +39,7 @@
       <span class="icon-dots">PRINCIPAL</span>
     </header>
     <div class="list-group">
-      <a href="#" class="list-group-item noborder"><span class="icon-explorar"></span>Explorar</a>
+      <a href="#" class="list-group-item noborder" ><span class="icon-explorar"></span>Explorar</a>
       <a href="#" class="list-group-item noborder"><span class="icon-alldarwins"></span>All Darwins</a>
       <a href="#" class="list-group-item noborder"><span class="icon-darwinia"></span>Darwinia</a>
     </div>
@@ -136,12 +136,12 @@
 
     <div>
       <ul class="nav navbar-nav">
-        <li class="text-center"><a id="set-list-view" href="#" title="View as list"><span class="icon-list"></span></a></li>
-        <li  class="text-center"><a id="set-grid-view" href="#" title="View as grid"><span class="icon-card"></span></a></li>
-        <li class="text-center"><a id="set-carousel-view" href="#" title="View as carousel"><span class="icon-carousel-mode"></span></a></li>
+        <li class="text-center" data-toggle="tooltip" data-placement="bottom" title="List view mode"><a id="set-list-view" href="#" ><span class="icon-list"></span></a></li>
+        <li  class="text-center" data-toggle="tooltip" data-placement="bottom" title="Grid view mode"><a id="set-grid-view" href="#"><span class="icon-card"></span></a></li>
+        <li class="text-center" data-toggle="tooltip" data-placement="bottom" title="Carousel view mode"><a id="set-carousel-view" href="#" ><span class="icon-carousel-mode"></span></a></li>
         <li>
 
-          <div class="darwin-switch">
+          <div class="darwin-switch" data-toggle="tooltip" data-placement="bottom" title="Display items in portfolio">
             In portfolio
             <input class="collapse" id="in-portfolio" name="in-portfolio" type="checkbox" checked>
             <label for="in-portfolio" class="label-default" title="View items in portfolio only"></label>
@@ -152,12 +152,12 @@
 
       <ul id="order-by" class="nav navbar-nav navbar-right">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Order by Return <span class="glyphicon glyphicon-chevron-down toggle-status"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Order by <span id="filter-tag">Return</span> <span class="glyphicon glyphicon-chevron-down toggle-status"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Inversión</a></li>
-            <li><a href="#">Retorno</a></li>
-            <li><a href="#">Drawdown</a></li>
-            <li><a href="#">D-Score</a></li>
+            <li><a href="#" data-order-by="inversion">Inversión</a></li>
+            <li><a href="#" data-order-by="retorno">Retorno</a></li>
+            <li><a href="#" data-order-by="drawdown">Drawdown</a></li>
+            <li><a href="#" data-order-by="score">D-Score</a></li>
           </ul>
         </li>
       </ul>
