@@ -71,6 +71,8 @@
     border-left: 13px solid transparent;
     border-right: 13px solid transparent;
     border-bottom: 15px solid white;
+
+
   }
 
   // Links within the dropdown menu
@@ -218,6 +220,7 @@
   .navbar-right {
     .dropdown-menu {
       right: 0; left: auto;
+ 
     }
     // Necessary for overrides of the default right aligned menu.
     // Will remove come v4 in all likelihood.
@@ -225,4 +228,6 @@
       left: 0; right: auto;
     }
   }
+
+
 }

@@ -3543,7 +3543,9 @@ tbody.collapse.in {
       .navbar-nav .open .dropdown-menu > li > a {
         line-height: 20px; }
         .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-nav .open .dropdown-menu > li > a:focus {
-          background-image: none; } }
+          background-image: none; }
+      .navbar-nav .open .dropdown-menu:before {
+        display: none; } }
   @media (min-width: 768px) {
     .navbar-nav {
       float: left;
@@ -5036,10 +5038,16 @@ html.sidebar-active {
     max-width: 520px;
     position: relative;
     position: relative; }
+    @media (max-width: 767px) {
+      #main-content .description {
+        padding-right: 10px; } }
     #main-content .description .toggler {
       position: absolute;
       right: -20px;
       top: 5px; }
+      @media (max-width: 767px) {
+        #main-content .description .toggler {
+          right: 0; } }
     #main-content .description:after {
       content: '';
       position: absolute;
@@ -5074,19 +5082,31 @@ html.sidebar-active {
     padding: 15px 15px;
     color: white;
     border-right: 1px solid #505050; }
+    @media (max-width: 767px) {
+      #main-content #filters .darwin-switch {
+        text-align: center;
+        border-right: 0px; }
+        #main-content #filters .darwin-switch label {
+          text-align: left; } }
   #main-content #filters .icon-card:before, #main-content #filters .icon-carousel-mode:before {
     margin-right: 0px; }
-  #main-content #filters .dropdown-toggle {
+  #main-content #filters .navbar-nav > li {
+    min-width: 56px; }
+  @media (max-width: 767px) {
+    #main-content #filters #order-by {
+      text-align: center; } }
+  #main-content #filters #order-by .dropdown-toggle {
     color: white;
     border-left: 1px solid #505050;
     padding: 15px 30px; }
-    #main-content #filters .dropdown-toggle .toggle-status {
+    @media (max-width: 767px) {
+      #main-content #filters #order-by .dropdown-toggle {
+        border-left: 0px; } }
+    #main-content #filters #order-by .dropdown-toggle .toggle-status {
       color: #6C6C6C;
       margin-left: 6px; }
-    #main-content #filters .dropdown-toggle + .dropdown-menu {
+    #main-content #filters #order-by .dropdown-toggle + .dropdown-menu {
       right: 13px; }
-  #main-content #filters .navbar-nav > li {
-    min-width: 56px; }
   #main-content #darwins-found {
     margin-bottom: 20px; }
   #main-content .panel .panel-heading {
