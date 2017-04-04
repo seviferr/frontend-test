@@ -133,13 +133,18 @@
 	});
 
 
-	$('[data-toggle="tooltip"]').tooltip({
-		trigger : 'hover'
-	});
+	if(!('ontouchstart' in window))
+	{
+		$('[data-toggle="tooltip"]').tooltip({
+			trigger : 'hover'
+		});
+	}
 
-	
+
+
+
 	loadCarousel($('.owl-carousel'));
- 	animateAll();
+	animateAll();
 
 
 })(jQuery, window, document);
