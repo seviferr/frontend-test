@@ -5144,13 +5144,6 @@ html.sidebar-active {
   #main-content #cards[data-view-mode='carousel'] #set-carousel-view {
     color: #00C9FF;
     background-color: rgba(32, 32, 32, 0.5); }
-  #main-content #cards[data-view-mode='carousel'] .item {
-    transition: 0.8s all ease-in-out; }
-    #main-content #cards[data-view-mode='carousel'] .item.loading {
-      opacity: 0;
-      -ms-transform: translateX(40px);
-          transform: translateX(40px);
-      -webkit-transform: translateX(40px); }
   #main-content #cards[data-view-mode='list'] #set-list-view {
     color: #00C9FF;
     background-color: rgba(32, 32, 32, 0.5); }

@@ -284,17 +284,6 @@ html{
 				background-color: $navbar-default-link-active-bg;
 			}
 
-			.item{
-				
-				transition: 0.8s all ease-in-out;
-
-				&.loading{
-						opacity: 0;
-						transform: translateX(40px);
-						-webkit-transform: translateX(40px);
-				}
-			}
-
 		}
 
 		
