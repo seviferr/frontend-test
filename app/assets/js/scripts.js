@@ -164,7 +164,9 @@ $('#order-by .dropdown-menu a').click(function(){
 animateAll();
 
 
-$('[data-toggle="tooltip"]').tooltip()
+$('[data-toggle="tooltip"]').tooltip({
+    trigger : 'hover'
+});
 
 
 
